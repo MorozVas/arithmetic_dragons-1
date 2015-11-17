@@ -26,6 +26,7 @@ def game_tournament(hero, dragon_list):
                 print('Верно! \n** дракон кричит от боли **')
             else:
                 dragon.attack(hero)
+                hero._experience -= randint(0,5)
                 print('Ошибка! \n** вам нанесён удар... **')
         if dragon.is_alive():
             break

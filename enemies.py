@@ -72,12 +72,16 @@ class DifferentialDragon(Dragon):
         self._color = 'дифференциальный'
 
     def question(self):
-        x = randint(1,100)
-        y = randint(1,100)
+        x = randint(1,10)
+        y = randint(1,10)
         z = randint(0,5)
         self.__quest = "(" + str(x) + "x^" + str(y) + ")' at point x=" + str(z)  
-        self.set_answer(x*y*(z**(y-1)))
+        if y-1 > 0 :
+            self.set_answer(x*y*(z**(y-1)))
+        else:
+            self.set_answer(x)
         return self.__quest
+
 class MythrilDragon(Dragon):
     def __init__(self):
         self._health = 50
