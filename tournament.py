@@ -22,6 +22,7 @@ def game_tournament(hero, dragon_list):
 
             if dragon.check_answer(answer):
                 hero.attack(dragon)
+                hero._experience += randint(0,5)
                 print('Верно! \n** дракон кричит от боли **')
             else:
                 dragon.attack(hero)
